@@ -3,8 +3,6 @@ import Lightning from "@/components/Lightning";
 import { Calendar, Instagram, MapPin, Music, Sparkles } from "lucide-react";
 import Image from "next/image";
 
-export const runtime = "edge";
-
 export default function ComingSoonPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-purple-950 to-pink-950 relative overflow-hidden">

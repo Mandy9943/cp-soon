@@ -1,6 +1,6 @@
 "use client";
 
-import { Clock, Zap } from "lucide-react";
+import { Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface TimeLeft {
@@ -47,17 +47,16 @@ export default function CountdownTimer() {
       <div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-cyan-500/5 animate-pulse"></div>
 
       {/* Construction icon animation */}
-      <div className="absolute top-4 right-4 animate-bounce">
-        <Zap className="w-6 h-6 text-yellow-400" />
-      </div>
 
       <div className="relative z-10">
         {/* Header */}
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-cyan-400 animate-pulse" />
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
-            🚧 Sitio en Construcción 🚧
-          </h2>
+        <div className="text-center mb-4">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 animate-pulse" />
+            <span className="text-lg sm:text-xl text-cyan-400 font-semibold">
+              En Construcción
+            </span>
+          </div>
         </div>
 
         {/* Countdown */}
@@ -70,9 +69,9 @@ export default function CountdownTimer() {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-gradient-to-b from-pink-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-pink-500/30 text-center"
+              className="bg-gradient-to-b from-pink-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-2 sm:p-3 md:p-4 border border-pink-500/30 text-center"
             >
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">
                 {item.value.toString().padStart(2, "0")}
               </div>
               <div className="text-xs sm:text-sm text-gray-300 font-medium">
